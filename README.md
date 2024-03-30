@@ -1,1 +1,1 @@
-# nasa-image-of-the-day-api Title
+# nasa-image-of-the-day-api
