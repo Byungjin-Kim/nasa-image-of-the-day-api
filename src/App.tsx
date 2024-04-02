@@ -9,7 +9,7 @@ interface NASAData {
   // Define NASA API data type
   title: string;
   date: string;
-
+  explanation: string;
 }
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
@@ -44,9 +44,9 @@ function App() {
         </header>
       </div>
       <div className='Nasa-photo-wrapper'>
-        {/*Conditional rendering using the &&*/}
         <h2>{data.title}</h2>
         <p>{data.date}</p>
+        <p className="explanation">{data.explanation}</p>
 
       </div>
 
