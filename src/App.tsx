@@ -3,13 +3,15 @@ import axios from 'axios';
 
 import './App.css';
 
-import Nasaphoto from './Components/Nasaphoto';
+// import Nasaphoto from './Components/Nasaphoto';
 
 interface NASAData {
   // Define NASA API data type
   title: string;
   date: string;
   explanation: string;
+  url: string;
+
 }
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
@@ -46,6 +48,8 @@ function App() {
       <div className='Nasa-photo-wrapper'>
         <h2>{data.title}</h2>
         <p>{data.date}</p>
+
+        <img src={data.url} alt='Nasa today' />
         <p className="explanation">{data.explanation}</p>
 
       </div>
