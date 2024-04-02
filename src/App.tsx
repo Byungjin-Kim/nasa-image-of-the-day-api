@@ -8,6 +8,7 @@ import Nasaphoto from './Components/Nasaphoto';
 interface NASAData {
   // Define NASA API data type
   title: string;
+  date: string;
 
 }
 
@@ -32,6 +33,8 @@ function App() {
     fetchPhoto();
   }, [])
 
+  if (!data) return <div>Fetching image of the day</div>;
+
 
   return (
     <>
@@ -42,7 +45,8 @@ function App() {
       </div>
       <div className='Nasa-photo-wrapper'>
         {/*Conditional rendering using the &&*/}
-        {data && <h2>{data.title}</h2>}
+        <h2>{data.title}</h2>
+        <p>{data.date}</p>
 
       </div>
 
