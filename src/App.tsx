@@ -17,6 +17,23 @@ interface NASAData {
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 const URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
 
+function NasaImg({ title, explanation, }) {
+  return (
+    <div className='Nasa-photo-wrapper'>
+      <h2>{title}</h2>
+      <p>{explanation}</p>
+    </div>
+  )
+}
+
+function Figure({ url, date }) {
+  return (
+    <figure>
+      <img src={url} alt='Nasa today' />
+      <figcaption>Awesome img taken on {date}</figcaption>
+    </figure>
+  )
+}
 
 function App() {
   const [data, setData] = useState<NASAData | null>(null);
@@ -45,15 +62,15 @@ function App() {
           <h1>Hello World!</h1>
         </header>
       </div>
-      <div className='Nasa-photo-wrapper'>
-        <h2>{data.title}</h2>
-        <p>{data.date}</p>
+      <NasaImg
+        title={data.title}
+        explanation={data.explanation}
 
-        <img src={data.url} alt='Nasa today' />
-        <p className="explanation">{data.explanation}</p>
-
-      </div>
-
+      />
+      <Figure
+        url={data.url}
+        date={data.date}
+      />
     </>
 
   );
