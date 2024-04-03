@@ -11,13 +11,22 @@ interface NASAData {
   date: string;
   explanation: string;
   url: string;
+}
 
+interface NasaImgProps {
+  title: string;
+  explanation: string;
+}
+
+interface FigureProps {
+  url: string;
+  date: string;
 }
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 const URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
 
-function NasaImg({ title, explanation, }) {
+function NasaImg({ title, explanation }: NasaImgProps) {
   return (
     <div className='Nasa-photo-wrapper'>
       <h2>{title}</h2>
@@ -26,7 +35,7 @@ function NasaImg({ title, explanation, }) {
   )
 }
 
-function Figure({ url, date }) {
+function Figure({ url, date }: FigureProps) {
   return (
     <figure>
       <img src={url} alt='Nasa today' />
