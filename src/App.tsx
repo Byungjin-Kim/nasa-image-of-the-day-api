@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import './App.css';
 
-// import Nasaphoto from './Components/Nasaphoto';
+import NasaImg from './Components/NasaImg';
 
 interface NASAData {
   // Define NASA API data type
@@ -11,11 +11,6 @@ interface NASAData {
   date: string;
   explanation: string;
   url: string;
-}
-
-interface NasaImgProps {
-  title: string;
-  explanation: string;
 }
 
 interface FigureProps {
@@ -26,14 +21,7 @@ interface FigureProps {
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 const URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
 
-function NasaImg({ title, explanation }: NasaImgProps) {
-  return (
-    <div className='Nasa-photo-wrapper'>
-      <h2>{title}</h2>
-      <p>{explanation}</p>
-    </div>
-  )
-}
+
 
 function Figure({ url, date }: FigureProps) {
   return (
