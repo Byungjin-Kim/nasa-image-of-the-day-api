@@ -6,8 +6,8 @@ import './App.css';
 import NasaImg from './Components/NasaImg';
 import Figure from './Components/Figure';
 
+// Define NASA API data type
 interface NASAData {
-  // Define NASA API data type
   title: string;
   date: string;
   explanation: string;
@@ -17,7 +17,6 @@ interface NASAData {
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 const URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
 
-
 function App() {
   const [data, setData] = useState<NASAData | null>(null);
 
@@ -25,7 +24,7 @@ function App() {
     function fetchPhoto() {
       axios.get(URL)
         .then(res => {
-          console.log(res.data);
+          // console.log(res.data);
           setData(res.data);
         })
         .catch(err => {
@@ -36,7 +35,6 @@ function App() {
   }, [])
 
   if (!data) return <div>Fetching image of the day</div>;
-
 
   return (
     <>
