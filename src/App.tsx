@@ -43,16 +43,17 @@ function App() {
           <h1>Hello World!</h1>
         </header>
       </div>
-      <NasaImg
-        title={data.title}
-        explanation={data.explanation}
-      />
-      <Figure
-        url={data.url}
-        date={data.date}
-      />
+      <div className="content-wrapper">
+        <NasaImg
+          title={data.title}
+          explanation={data.explanation}
+        />
+        <Figure
+          url={data.url}
+          date={data.date}
+        />
+      </div>
     </>
-
   );
 }
 
