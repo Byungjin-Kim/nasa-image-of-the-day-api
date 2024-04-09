@@ -40,7 +40,7 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>Hello World!</h1>
+          <h1>NASA Astronomy Picture of the Day</h1>
         </header>
       </div>
       <div className="content-wrapper">
