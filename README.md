@@ -9,26 +9,16 @@ This React application displays the Astronomy Picture of the Day provided by NAS
 - **Responsive Design**: Adapts smoothly to different screen sizes, ensuring a great user experience on mobile, tablet, and desktop.
 - **Error Handling**: Implements basic error handling in case the API fails to fetch the data.
 
-## Prerequisites
-
-Before you begin, ensure you have the following installed:
-- Node.js (v12.x or later recommended)
-- npm (normally comes with Node.js)
-
 ## Installation
 
 To get the project running on your local machine, follow these steps:
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://your-repository-url.git
-   cd your-project-directory
-   ```
+git clone https://your-repository-url.git
+cd your-project-directory
 
 2. **Install dependencies:**
-   ```bash
    npm install
-   ```
 
 3. **Set up the NASA API key:**
    
@@ -49,15 +39,6 @@ To get the project running on your local machine, follow these steps:
 ## Usage
 
 Simply open the app in your browser, and it will automatically fetch and display the Astronomy Picture of the Day along with its relevant details. If there's an issue with fetching data, the app will display an error message.
-
-## Contributing
-
-Contributions to improve the app are welcome. To contribute:
-- Fork the repository
-- Create a new branch for your feature (`git checkout -b feature/AmazingFeature`)
-- Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-- Push to the branch (`git push origin feature/AmazingFeature`)
-- Open a new Pull Request
 
 ## License
 
