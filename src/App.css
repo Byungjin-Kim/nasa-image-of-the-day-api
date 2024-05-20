@@ -8,17 +8,6 @@
   box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   height: 200px;
@@ -58,7 +47,6 @@
   margin-bottom: 2em;
 }
 
-
 .content-wrapper {
   display: flex;
   justify-content: space-between;
@@ -72,19 +60,4 @@
   max-width: 600px;
   width: 100%;
   height: auto;
-}
-
-
-
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
