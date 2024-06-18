@@ -44,13 +44,13 @@ function App() {
         </header>
       </div>
       <div className="content-wrapper">
+      <Figure
+          url={data.url}
+          date={data.date}
+        />
         <NasaImg
           title={data.title}
           explanation={data.explanation}
-        />
-        <Figure
-          url={data.url}
-          date={data.date}
         />
       </div>
     </>
