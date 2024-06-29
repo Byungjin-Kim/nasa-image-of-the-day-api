@@ -17,59 +17,75 @@ body {
 
 .App-header {
   background-color: #000000;
-  height: 150px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(10px + 2vmin);
   color: white;
   padding: 20px;
+  margin: 0;
 }
 
+.App-header h1, .App-header h3 {
+  margin: 0; 
+  padding: 0;
+}
 
-/* Container for the image and text to ensure they align properly */
-.Nasa-photo-wrapper {
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: center;
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+.image-container {
+  flex: 8.5;
+  margin-right: 20px;
+}
+
+.Nasa-photo-wrapper {
+  flex: 2.5;
+  margin: 20px;
+  padding: 10px;
   background: #333;
   box-shadow: 0 4px 8px rgba(255,255,255,0.1);
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
-/* Styles for the title */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: #ffffff; /* 글씨 색상을 흰색으로 설정 */
+  font-size: 12px;
+  margin-top: 8px;
+}
+
 .Nasa-photo-wrapper h2 {
-  font-size: 28px;
+  font-size: 22px;
   color: #ffffff;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-/* Styles for the explanation */
 .Nasa-photo-wrapper p {
-  font-size: 18px;
+  font-size: 14px;
   color: #ededed;
   line-height: 1.6;
   margin-top: 0;
   margin-bottom: 1em;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #000000;
-}
-
-.responsive-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
 }

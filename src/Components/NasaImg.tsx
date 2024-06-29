@@ -11,7 +11,7 @@ const NasaImg: React.FC<NasaImgProps> = ({ title, explanation }) => {
             <h2>{title}</h2>
             <p>{explanation}</p>
         </div>
-    )
+    );
 }
 
 export default NasaImg;

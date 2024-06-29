@@ -15,7 +15,7 @@ interface NASAData {
 }
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
-const URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
+const URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 function App() {
   const [data, setData] = useState<NASAData | null>(null);
@@ -24,15 +24,14 @@ function App() {
     function fetchPhoto() {
       axios.get(URL)
         .then(res => {
-          // console.log(res.data);
           setData(res.data);
         })
         .catch(err => {
           console.log(err.message);
-        })
+        });
     }
     fetchPhoto();
-  }, [])
+  }, []);
 
   if (!data) return <div>Fetching image of the day</div>;
 
@@ -40,14 +39,17 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>NASA Astronomy Picture of the Day</h1>
+          <h1>NASA</h1>
+          <h3>Astronomy Picture of the Day</h3>
         </header>
       </div>
       <div className="content-wrapper">
-      <Figure
-          url={data.url}
-          date={data.date}
-        />
+        <div className="image-container">
+          <Figure
+            url={data.url}
+            date={data.date}
+          />
+        </div>
         <NasaImg
           title={data.title}
           explanation={data.explanation}

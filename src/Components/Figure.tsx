@@ -14,5 +14,4 @@ const Figure: React.FC<FigureProps> = ({ url, date }) => {
     );
 }
 
-
 export default Figure;
